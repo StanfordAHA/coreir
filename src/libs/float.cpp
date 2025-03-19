@@ -88,6 +88,8 @@ using namespace CoreIR;
 //cos
 //tan
 
+//bf16toint8_pack
+
 
 
 
@@ -136,7 +138,7 @@ Namespace* CoreIRLoadLibrary_float(Context* c) {
 
   vector<string> unaryOps = {"neg", "sqr", "flr", "ceil", "rnd", "sqrt", "exp", "ln", "sin", "cos", "tan", "asin", "acos", "atan", "tanh"};
   vector<string> binaryOps =
-    {"abs", "add", "sub", "mul", "div", "rem", "min", "max", "atan2", "power"};
+    {"abs", "add", "sub", "mul", "div", "rem", "min", "max", "atan2", "power", "bf16toint8_pack"};
   vector<string> binaryReduceOps = {"le", "lt", "ge", "gt", "eq", "neq"};
 
   for (auto op : unaryOps) {
