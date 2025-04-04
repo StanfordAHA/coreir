@@ -136,7 +136,7 @@ Namespace* CoreIRLoadLibrary_float(Context* c) {
                       {"out", ptype}});
   });
 
-  vector<string> unaryOps = {"neg", "sqr", "flr", "ceil", "rnd", "sqrt", "exp", "ln", "sin", "cos", "tan", "asin", "acos", "atan", "tanh"};
+  vector<string> unaryOps = {"neg", "sqr", "flr", "ceil", "rnd", "sqrt", "exp", "ln", "sin", "cos", "tan", "asin", "acos", "atan", "tanh", "int8tobf16_unpack_high", "int8tobf16_unpack_low"};
   vector<string> binaryOps =
     {"abs", "add", "sub", "mul", "div", "rem", "min", "max", "atan2", "power", "bf16toint8_pack"};
   vector<string> binaryReduceOps = {"le", "lt", "ge", "gt", "eq", "neq"};
