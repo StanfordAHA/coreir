@@ -136,7 +136,7 @@ Namespace* CoreIRLoadLibrary_float(Context* c) {
 
   vector<string> unaryOps = {
     "neg", "sqr", "flr", "ceil", "rnd", "sqrt", "exp", "ln", "sin", "cos", "tan", "asin", "acos", "atan", "tanh",
-    "bit8_unpack_high", "bit8_unpack_low"
+    "bit8_unpack_high", "bit8_unpack_low", "get_shared_exp"
   };
   vector<string> binaryOps =
     {"abs", "add", "sub", "mul", "div", "rem", "min", "max", "abs_max", "atan2", "power", "bit8_pack"};
