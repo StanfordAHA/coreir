@@ -139,7 +139,7 @@ Namespace* CoreIRLoadLibrary_float(Context* c) {
     "bit8_unpack_high", "bit8_unpack_low", "get_shared_exp"
   };
   vector<string> binaryOps =
-    {"abs", "add", "sub", "mul", "div", "rem", "min", "max", "abs_max", "atan2", "power", "bit8_pack"};
+    {"abs", "add", "sub", "mul", "div", "rem", "min", "max", "abs_max", "atan2", "power", "bit8_pack", "e8m0_quant"};
   vector<string> binaryReduceOps = {"le", "lt", "ge", "gt", "eq", "neq"};
 
   for (auto op : unaryOps) {
