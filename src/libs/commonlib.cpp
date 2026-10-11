@@ -208,8 +208,7 @@ Namespace* CoreIRLoadLibrary_commonlib(Context* c) {
 
   Generator* umin = c->getGenerator("commonlib.umin");
   umin->setGeneratorDefFromFun([](Context* c, Values args, ModuleDef* def) {
-    uint width = args.at("width")->get<int>();
-    ASSERT(width == 16, "NYI non 16");
+    // Width-generic: coreir.{u,s}{le,ge} + mux at args' width (the CGRA data width)
     def->addInstance("ucomp", "coreir.ule", args);
     def->addInstance("min_mux", "coreir.mux", args);
     def->connect("self.in0", "ucomp.in0");
@@ -222,8 +221,7 @@ Namespace* CoreIRLoadLibrary_commonlib(Context* c) {
 
   Generator* smin = c->getGenerator("commonlib.smin");
   smin->setGeneratorDefFromFun([](Context* c, Values args, ModuleDef* def) {
-    uint width = args.at("width")->get<int>();
-    ASSERT(width == 16, "NYI non 16");
+    // Width-generic: coreir.{u,s}{le,ge} + mux at args' width (the CGRA data width)
     def->addInstance("scomp", "coreir.sle", args);
     def->addInstance("min_mux", "coreir.mux", args);
     def->connect("self.in0", "scomp.in0");
@@ -236,8 +234,7 @@ Namespace* CoreIRLoadLibrary_commonlib(Context* c) {
 
   Generator* umax = c->getGenerator("commonlib.umax");
   umax->setGeneratorDefFromFun([](Context* c, Values args, ModuleDef* def) {
-    uint width = args.at("width")->get<int>();
-    ASSERT(width == 16, "NYI non 16");
+    // Width-generic: coreir.{u,s}{le,ge} + mux at args' width (the CGRA data width)
     def->addInstance("ucomp", "coreir.uge", args);
     def->addInstance("max_mux", "coreir.mux", args);
     def->connect("self.in0", "ucomp.in0");
@@ -250,8 +247,7 @@ Namespace* CoreIRLoadLibrary_commonlib(Context* c) {
 
   Generator* smax = c->getGenerator("commonlib.smax");
   smax->setGeneratorDefFromFun([](Context* c, Values args, ModuleDef* def) {
-    uint width = args.at("width")->get<int>();
-    ASSERT(width == 16, "NYI non 16");
+    // Width-generic: coreir.{u,s}{le,ge} + mux at args' width (the CGRA data width)
     def->addInstance("scomp", "coreir.sge", args);
     def->addInstance("max_mux", "coreir.mux", args);
     def->connect("self.in0", "scomp.in0");
