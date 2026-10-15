@@ -67,6 +67,10 @@ add_executable(test_linking test_linking.cpp)
 target_link_libraries(test_linking gtest_main coreir)
 add_test(NAME test_linking COMMAND test_linking WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/tests/gtest)
 
+add_executable(test_commonlib_width test_commonlib_width.cpp)
+target_link_libraries(test_commonlib_width gtest_main coreir coreir-commonlib)
+add_test(NAME test_commonlib_width COMMAND test_commonlib_width WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/tests/gtest)
+
 add_executable(test_unit test_unit.cpp)
 target_link_libraries(test_unit gtest_main coreir)
 add_test(NAME test_unit COMMAND test_unit WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/tests/gtest)
